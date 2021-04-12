@@ -3,6 +3,8 @@ body {
   color: #FFF;
   font-family: Arial, sans-serif;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 * {
@@ -10,8 +12,7 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
+  margin: auto;
 }
 
 form {
@@ -43,11 +44,20 @@ input[type=text] {
   height: 32px;
 }
 
-
+.nav {
+  margin-top: 50px;
+}
 
 input.submit {
   background: #FF5873;
   color: white;
 }
 
+button {
+  background: #FF5873;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
 
