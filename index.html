@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XSS Test</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <form action="">
+    <h3>Hello <span id="word">World</span>!</h3>
+    <input type="text" name="name">
+    <input class="submit" type="submit"  name="submit" onclick="getData()">
+  </form>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
