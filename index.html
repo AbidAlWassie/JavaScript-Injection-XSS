@@ -9,17 +9,23 @@
 <div class="container">
   <form name="test" action="">
     <h3>Hello <span id="word">World</span>!</h3>
-    <input type="text" name="name">
+    <input type="text" name="word">
     <input class="submit" type="submit" name="submit" onclick="getData()">
   </form>
 
   <div class="nav">
-    <button id="getBtn" onclick="loadData()">Get</button>
+    <button id="getBtn" onclick="sendData()">Get</button>
     <button id="postBtn">Post</button>
   </div>
 
   <div class="output"></div>
 </div>
+
+<?php
+  $name = $_GET['word'];
+  echo $name." Hello";
+?>
+
 <!--<script src="js/app.js"></script>-->
 <script src="js/script.js"></script>
 </body>
