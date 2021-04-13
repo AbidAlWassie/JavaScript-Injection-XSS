@@ -7,17 +7,20 @@
 </head>
 <body>
 <div class="container">
-  <form action="">
+  <form name="test" action="">
     <h3>Hello <span id="word">World</span>!</h3>
     <input type="text" name="name">
     <input class="submit" type="submit" name="submit" onclick="getData()">
   </form>
 
   <div class="nav">
-    <button id="getBtn">Get</button>
+    <button id="getBtn" onclick="loadData()">Get</button>
     <button id="postBtn">Post</button>
   </div>
+
+  <div class="output"></div>
 </div>
+<!--<script src="js/app.js"></script>-->
 <script src="js/script.js"></script>
 </body>
 </html>
