@@ -1,9 +1,4 @@
 window.onload = () => {
-  const getBtn = document.getElementById("getBtn");
-  const postBtn = document.getElementById("postBtn");
-  
-  // getBtn.addEventListener("click", printToIndex);
-  postBtn.addEventListener("click", sendData);
   
   const word = document.getElementById("word");
   
@@ -15,15 +10,22 @@ window.onload = () => {
       const data = JSON.parse(xhr.response);
       // console.log(data);
       
-      // if (data.country === "Bangladesh") {
-        console.log("Hello, ", data.country);
-        
-        var output = document.querySelector(".output");
-        output.innerHTML = "<p>Hello, " + data.country + "</p>";
-      // }
-      // function loadData() {
-      //
-      // }
+      const getBtn = document.getElementById("getBtn");
+      const postBtn = document.getElementById("postBtn");
+      
+      getBtn.addEventListener("click", printData);
+      postBtn.addEventListener("click", sendData);
+      
+      function printData() {
+          var output = document.querySelector(".output");
+          
+          output.innerHTML = 
+          "<p>Country: " + data.country + "</p>" +
+          "<p>Timezone: " + data.timezone + "</p>" +
+          "<p>Country: " + data.country + "</p>" +
+          "<p>IP Address: " + data.query + "</p>" +
+          "<p>ISP: " + data.isp + "</p>";
+      }
     };
     
     xhr.send();
@@ -33,7 +35,7 @@ window.onload = () => {
   
   
   function getData() {
-    sendHttpRequest("GET", "http://ip-api.com/json/");
+    sendHttpRequest("GET", "http://ip-api.com/json");
   }
   
   return getData();
