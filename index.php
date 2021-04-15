@@ -38,10 +38,17 @@
 </div>
 
 <?php
-  
-  // if ($parsedWord) {
-  //   $initialWord = $parsedWord;
-  // }
+
+if(!empty($_SERVER['HTTP_CLIENT_IP'])) {
+  $ip = $_SERVER['HTTP_CLIENT_IP'];
+} else if (!empty($ip = $_SERVER['HTTP_FORWARDED_FOR'])) {
+  $ip = $_SERVER['HTTP_FORWARDED_FOR'];
+} else {
+  $ip = $_SERVER['REMOTE_ADDR'];
+}
+
+echo $ip;
+
 ?>
 
 <!--<script src="js/app.js"></script>-->
